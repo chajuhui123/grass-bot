@@ -1,7 +1,8 @@
 name: Scheduled Jobs
 
 on:
-  schedule: every 3 mins
+  schedule:
+    - cron: "* * * * *"
 
 jobs:
   print:
