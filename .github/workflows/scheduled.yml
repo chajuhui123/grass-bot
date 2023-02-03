@@ -1,0 +1,12 @@
+name: Scheduled Jobs
+
+on:
+  schedule: every 3 mins
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: start
+        run: echo "Hello world"
