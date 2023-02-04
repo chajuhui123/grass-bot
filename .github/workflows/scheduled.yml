@@ -1,29 +1,29 @@
-name: Grass bot Scheduled Jobs
+# name: Grass bot Scheduled Jobs
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"
 
-jobs:
-  test_schedule:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello World
-        run: echo "Hello World"
+# jobs:
+#   test_schedule:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Hello World
+#         run: echo "Hello World"
 
-      - name: checkout repository
-        uses: actions/checkout@v2
-        with:
-          repository: ${{ github.repository }}
-          token: ${{ secrets.MY_SECRET_GITHUB_TOKEN }}
-          path: grass-bot
+#       - name: checkout repository
+#         uses: actions/checkout@v2
+#         with:
+#           repository: ${{ github.repository }}
+#           token: ${{ secrets.MY_SECRET_GITHUB_TOKEN }}
+#           path: grass-bot
 
-      - name: Add date and push
-        run: |
-          cd grass-bot
-          date >> date.txt
-          git add .
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          git commit -am "[add] grass-bot added file 🌱"
-          git push
+#       - name: Add date and push
+#         run: |
+#           cd grass-bot
+#           date >> date.txt
+#           git add .
+#           git config --global user.email "github-actions@github.com"
+#           git config --global user.name "github-actions"
+#           git commit -am "[add] grass-bot added file 🌱"
+#           git push
